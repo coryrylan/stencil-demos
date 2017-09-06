@@ -1,21 +1,24 @@
-import { Component, Prop } from '@stencil/core';
-
+import { Component, Prop, Listen } from '@stencil/core';
 
 @Component({
   tag: 'my-name',
   styleUrl: 'my-name.scss'
 })
 export class MyName {
-
-  @Prop() first: string;
-
-  @Prop() last: string;
-
   render() {
     return (
-      <p>
-        Hello, my name is {this.first} {this.last}
-      </p>
+      <div>
+        <h1>My Web Component App</h1>
+
+        <my-dropdown title="Toggle">
+          Hello World
+        </my-dropdown>
+      </div>
     );
+  }
+
+  @Listen('onToggle')
+  log(event) {
+    console.log(event);
   }
 }
