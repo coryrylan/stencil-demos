@@ -1,4 +1,4 @@
-import { Component, Prop, Listen } from '@stencil/core';
+import { Component, Listen } from '@stencil/core';
 
 @Component({
   tag: 'my-name',
