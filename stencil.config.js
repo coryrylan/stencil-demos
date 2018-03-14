@@ -1,9 +1,11 @@
 exports.config = {
+  namespace: 'index',
+  generateDistribution: true,
   bundles: [
-    { components: ['my-name'] }
-  ],
-  collections: [
-    { name: '@stencil/router' }
+    {
+      components: ['my-name'],
+      components: ['my-dropdown']
+    }
   ]
 };
 
